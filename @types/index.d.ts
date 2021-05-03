@@ -36,19 +36,19 @@ export declare class TextInput extends PIXI.Container {
     constructor(options?: TextInputOptions)
 
     get substituteText(): string
-    substituteText(substitute: string): void
+    set substituteText(substitute: string)
 
     get placeholder(): string
-    placeholder(text: string): void
+    set placeholder(text: string)
 
     get disabled(): boolean
-    disabled(n: boolean): void
+    set disabled(n: boolean)
 
     get maxLength(): number
-    maxLength(length: number): void
+    set maxLength(length: number)
 
     get restrict(): RegExp
-    restrict(regex: RegExp): void
+    set restrict(regex: RegExp)
 
     htmlInput(): object
 
@@ -170,7 +170,7 @@ type BUTTON_STATUS = 'BUTTONDOWN' | 'BUTTONCONFIRM' | 'BUTTONUP' | 'BUTTONOVER' 
 export declare class ButtonTexture extends PIXI.utils.EventEmitter {
 
     _options: ButtonOptions
-    button: Sprite
+    button: PIXI.Sprite
 
     constructor(options?: ButtonOptions)
 
@@ -180,5 +180,5 @@ export declare class ButtonTexture extends PIXI.utils.EventEmitter {
 
     protected onButtonOver(): void
 
-    getButtonFace(): Sprite
+    getButtonFace(): PIXI.Sprite
 }
