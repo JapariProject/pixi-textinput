@@ -205,7 +205,7 @@ export class TextInput extends PIXI.Container {
     }
 
     _onInputInput (e) {
-        if (this._restrict_regex);
+        if (this._restrict_regex)
             this._applyRestriction ();
 
         if (this._substituted)
